@@ -1,0 +1,63 @@
+* {
+    -fx-font-family: tahoma arial;
+}
+
+.title {
+    -fx-font-size: 35px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, #2196f3 50%);
+}
+
+.title2 {
+    -fx-font-size: 22px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, #2196f3 50%);
+}
+
+.label_head {
+    -fx-font-size: 20px;
+    -fx-background-color: #EEE
+}
+
+JFXRadioButton {
+    -fx-font-size: 18px;
+    -fx-cursor: hand
+}
+
+.icon {
+    -fx-fill: #4DABF5
+}
+
+.icon:hover {
+    -fx-cursor: hand;
+    -fx-fill: #2196f3
+    
+}
+
+.emoji {
+    -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, #2196f3 50%);
+}
+
+.btn {
+    -fx-font-size: 18px;
+    -fx-text-fill: #4DABF5;
+    -fx-pref-width: 140px
+}
+
+.btn:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #2196f3;
+    -fx-fill: #2196f3;
+}
+.btn-finished {
+    -fx-font-size: 22px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #4DABF5;
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 20
+}
+
+.btn-finished:hover {
+    -fx-background-color: #2196F3;
+    -fx-cursor: hand
+}
+
