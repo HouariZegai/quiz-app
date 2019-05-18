@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" prefHeight="710.0" prefWidth="820.0" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.quizappfx.controllers.JavaQuizController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="38.0" prefWidth="820.0" style="-fx-background-color: #E4E2E4;">
+         <children>
+            <Label layoutX="14.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#close" prefHeight="10.0" prefWidth="10.0" styleClass="close-btn">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="38.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#minimize" prefHeight="10.0" prefWidth="10.0" styleClass="min-btn">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="393.0" layoutY="6.0" text="Java Quiz">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <StackPane fx:id="root" layoutY="30.0" prefHeight="680.0" prefWidth="820.0" style="-fx-background-color: #FFF;" stylesheets="@../css/content.css">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="testPane" maxHeight="-Infinity" prefHeight="680.0" prefWidth="820.0" styleClass="mainFxmlClass" visible="false">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="11.0" layoutY="23.0" prefHeight="635.0" prefWidth="790.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="titleLbl" styleClass="title" text="Basic Test">
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="44.0" prefWidth="747.0" styleClass="title2" text="Question:" />
+                        <ScrollPane prefHeight="214.0" prefWidth="790.0">
+                           <content>
+                              <TextArea fx:id="questionLbl" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="207.0" prefWidth="788.0" styleClass="label_head" />
+                           </content>
+                        </ScrollPane>
+                        <Label prefHeight="44.0" prefWidth="752.0" styleClass="title2" text="Answer:" />
+                        <VBox maxWidth="-Infinity" prefHeight="152.0" prefWidth="725.0" spacing="20.0">
+                           <children>
+                              <JFXRadioButton fx:id="response1" onAction="#radioClicked" text=" " />
+                              <JFXRadioButton fx:id="response2" onAction="#radioClicked" text=" " />
+                              <JFXRadioButton fx:id="response3" onAction="#radioClicked" text=" " />
+                              <JFXRadioButton fx:id="response4" onAction="#radioClicked" text=" " />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="69.0" prefWidth="680.0" spacing="20.0">
+                           <children>
+                              <JFXButton onAction="#btnPrevious" prefHeight="66.0" prefWidth="248.0" styleClass="btn" text="Previuos">
+                                 <graphic>
+                                    <OctIconView glyphName="CHEVRON_LEFT" size="46" styleClass="icon" wrappingWidth="30.0" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="RIGHT" onAction="#btnNext" prefHeight="66.0" prefWidth="132.0" styleClass="btn" text="Next">
+                                 <graphic>
+                                    <OctIconView glyphName="CHEVRON_RIGHT" size="50" styleClass="icon" wrappingWidth="30.0" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Icons525View glyphName="SIGN_OUT" layoutX="9.0" layoutY="57.0" onMouseClicked="#btnBackHome" size="25" styleClass="icon" />
+                  <ProgressIndicator fx:id="progress" layoutX="744.0" layoutY="18.0" prefHeight="60.0" prefWidth="70.0" progress="0.0">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ProgressIndicator>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="finishedPane" maxHeight="-Infinity" prefHeight="680.0" prefWidth="820.0" visible="false">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="136.0" layoutY="90.0" prefHeight="448.0" prefWidth="549.0" spacing="80.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Label styleClass="title" text="Congrate you finished the test" />
+                              <EmojiOneView size="32" styleClass="emoji" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                           <children>
+                              <JFXButton onAction="#btnViewResult" styleClass="btn-finished" text="View Result" />
+                              <JFXButton onAction="#btnBackTest" styleClass="btn-finished" text="Back to Test" />
+                              <JFXButton onAction="#btnBackHome" styleClass="btn-finished" text="Back to Home" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="resultPane" maxHeight="-Infinity" prefHeight="680.0" prefWidth="820.0" visible="false">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="136.0" layoutY="90.0" prefHeight="448.0" prefWidth="549.0" spacing="40.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Label styleClass="title" text="Your Result" />
+                              <EmojiOneView fx:id="emoji" size="32" styleClass="emoji" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="257.0" prefWidth="318.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="scoreLbl" style="-fx-font-size: 45px;" />
+                              <Label fx:id="precentageScoreLbl" style="-fx-font-size: 45px; -fx-text-fill: #2196f3;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="75.0" prefWidth="549.0" spacing="20.0">
+                           <children>
+                              <JFXButton onAction="#btnBackHome" styleClass="btn-finished" text="Back to Home" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="homePane" maxHeight="-Infinity" prefHeight="680.0" stylesheets="@../css/home.css">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="1.0" prefHeight="680.0" prefWidth="820.0" spacing="40.0">
+                     <children>
+                        <Label styleClass="title" text="Java Quiz" />
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="140.0" spacing="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnBasic" styleClass="btn-choose" text="Basic" />
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnOperator" styleClass="btn-choose" text="Operator/Condition" />
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnTables" styleClass="btn-choose" text="Tables/Loops" />
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnOOP" styleClass="btn-choose" text="OOP(Oriented Object Programming)" />
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnPoly" styleClass="btn-choose" text="Polymorphisme/Enum" />
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnException" styleClass="btn-choose" text="Exceptions" />
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnAdvanced" styleClass="btn-choose" text="Advanced" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                  </VBox>
+                  <MaterialDesignIconView fx:id="iconAbout" glyphName="INFORMATION_OUTLINE" layoutX="770.0" layoutY="45.0" onMouseClicked="#btnAbout" size="38" styleClass="about-icon" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
