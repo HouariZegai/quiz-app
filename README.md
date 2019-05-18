@@ -7,15 +7,15 @@ Quiz App is a fun new way to practise, improve, and test your Java skills, and t
 ## Screenshots
 Home page                |
 :-------------------------:|
-![select game img](screenshot/home.PNG)  |
+![Home page img](screenshot/home.PNG)  |
 
 Quiz           |  Finish Quiz
 :-------------------------:|:-------------------------:
-![select game img](screenshot/test.PNG)  |  ![about img](screenshot/finish_test.PNG)
+![quiz img](screenshot/test.PNG)  |  ![finish test img](screenshot/finish_test.PNG)
 
 Result           | About
 :-------------------------:|:-------------------------:
-![select game img](screenshot/result.PNG)  | ![about img](screenshot/about.PNG)
+![result img](screenshot/result.PNG)  | ![about img](screenshot/about.PNG)
 
 ## Libraries used
 * JFoenix (Material design)
