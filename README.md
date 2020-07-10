@@ -1,5 +1,5 @@
 # QuizAppFX
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/HouariZegai/QuizApp-FX/master/LICENSE)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![build](https://img.shields.io/jenkins/build/https/builds.apache.org/job/maven-box/job/maven/job/master.svg?style=flat-square)
 
 Quiz App is a fun new way to practise, improve, and test your Java skills, and test yourself in a truly.
@@ -45,12 +45,5 @@ This project is under the [MIT Licence](https://raw.githubusercontent.com/Houari
 ## Contributing
 If you want to contribute to this project and make it better with new ideas, your pull request is very welcomed.
 If you find any issue just put it in the repository issue section, thank you.
-
-## Follow me
-[Facebook](https://www.facebook.com/ZegaiBlog) |
-[Youtube](https://www.youtube.com/HouariZegai) |
-[Linkedin](https://www.linkedin.com/in/HouariZegai) |
-[Twitter](https://www.twitter.com/HouariZegai) |
-[Instagram](https://www.instagram.com/HouariZegai)
 
 .سبحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لا إِلهَ إِلأَ انْتَ أَسْتَغْفِرُكَ وَأَتْوبُ إِلَيْكَ
