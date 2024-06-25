@@ -34,7 +34,7 @@
                   <FontAwesomeIconView glyphName="MAP_MARKER" size="28" styleClass="font-about" />
                </graphic>
             </Label>
-            <Label prefHeight="50.0" styleClass="label-info" text="+213797603258">
+            <Label prefHeight="50.0" styleClass="label-info" text="+21300000000">
                <graphic>
                   <FontAwesomeIconView glyphName="PHONE" size="28" styleClass="font-about" />
                </graphic>

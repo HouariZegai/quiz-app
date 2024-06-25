@@ -13,10 +13,6 @@ Quiz           |  Finish Quiz
 :-------------------------:|:-------------------------:
 ![quiz img](screenshot/test.PNG)  |  ![finish test img](screenshot/finish_test.PNG)
 
-Result           | About
-:-------------------------:|:-------------------------:
-![result img](screenshot/result.PNG)  | ![about img](screenshot/about.PNG)
-
 ## Libraries used
 * JFoenix (Material design)
 * FontAwesomeFx (Icons)
